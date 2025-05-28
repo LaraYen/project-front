@@ -84,11 +84,6 @@ $(function () {
         })
     }
 
-    let getLineParameters = function (indexLine) {
-        let line = panel.find('tr').eq(indexLine);
-        line.find('.playerName');
-    }
-
     let editButtonClick = function () {
         $('.edit-button-img').on('click', function () {
             let indexLine = $(this).closest('td').parent().index();
@@ -237,9 +232,5 @@ $(function () {
         //if (yy < 10) yy = '0' + yy;
 
         return dd + '/' + mm + '/' + yy;
-    }
-
-    function formatDateToCreate(date) {
-
     }
 });
