@@ -1,0 +1,45 @@
+.header {
+    display: none;
+    margin-bottom: 30px;
+}
+
+.panel {
+    display: none;
+    white-space: nowrap;
+    width: 1%;
+}
+
+th, td {
+    border: 1px solid black;
+}
+
+.myselect-container select {
+    position:absolute;
+}
+
+.selected-page {
+    color: red;
+}
+
+.edit-button, .delete-button, .save-button {
+    cursor: pointer;
+}
+
+.form-flex {
+    /*align-items: flex-start;*/
+    justify-content: space-between;
+    /*text-align: left;*/
+    display: flex;
+    flex-direction: column;
+    width: 50%; /* Задайте желаемую ширину */
+}
+
+.form-flex label, .form-flex input {
+    flex: 1; /* Каждый элемент занимает одинаковое пространство */
+    text-align: left;
+    justify-content: space-around;
+}
+
+.create-button {
+    width: 50px;
+}
