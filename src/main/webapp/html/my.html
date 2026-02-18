@@ -1,11 +1,94 @@
-<html>
+<html lang="ru">
 <head>
     <title>RPG</title>
+    <meta charset="UTF-8">
     <script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
+    <script src="/js/script.js"></script>
     <link href="/css/my.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/my.css">
 </head>
 <body>
-<h1>RPG admin panel</h1>
-
+<h1 class="header">RPG admin panel</h1>
+<h2 class="header">Accounts list:</h2>
+<div class="myselect-container">
+    <label class="countOnPage">Count per page:
+        <select class="count" onmousedown="if(this.options.length>4){this.size=4;}" onchange='this.size=0;' onblur="this.size=0;">
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+        </select>
+    </label>
+</div>
+<table class="panel">
+    <tr class="panel-header">
+        <th>#</th>
+        <th>Name</th>
+        <th>Title</th>
+        <th>Race</th>
+        <th>Profession</th>
+        <th>Level</th>
+        <th>Birthday</th>
+        <th>Banned</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+</table>
+<div class="pages">
+    <label>Pages:</label>
+</div>
+<hr>
+<h2 class="header">Create new account:</h2>
+<div class="form-flex">
+    <label class="create-label-name" for="name">Name:</label>
+    <input type="text" maxlength="12" id="name">
+    <label class="create-label-title" for="title">Title:</label>
+    <input type="text" maxlength="30" id="title">
+    <label class="create-label-race" for="race">Race:</label>
+    <select id="race">
+        <option>HUMAN</option>
+        <option>DWARF</option>
+        <option>ELF</option>
+        <option>GIANT</option>
+        <option>ORC</option>
+        <option>TROLL</option>
+        <option>HOBBIT</option>
+    </select>
+    <label class="create-label-profession" for="profession">Profession:</label>
+    <select id="profession">
+        <option>WARRIOR</option>
+        <option>ROGUE</option>
+        <option>SORCERER</option>
+        <option>CLERIC</option>
+        <option>PALADIN</option>
+        <option>NAZGUL</option>
+        <option>WARLOCK</option>
+        <option>DRUID</option>
+    </select>
+    <label class="create-label-level" for="level">Level:</label>
+    <input type="number" min="0" max="100" step="1" id="level">
+    <label class="create-label-birthdate" for="birthdate">Birthday:</label>
+    <input type="date" min="2000-01-01" max="3000-12-31" id="birthdate">
+    <label class="create-label-banned" for="banned">Banned:</label>
+    <select id="banned">
+        <option>false</option>
+        <option>true</option>
+    </select>
+    <button class="create-button"><img src="/img/save.png" alt=""></button>
+</div>
 </body>
 </html>
